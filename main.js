@@ -93,9 +93,9 @@ class Engine{
                 triProjected.pts[0].x,
                 triProjected.pts[0].y,
                 triProjected.pts[1].x,
-                triProjected.pts[1].x,
+                triProjected.pts[1].y,
                 triProjected.pts[2].x,
-                triProjected.pts[2].x,
+                triProjected.pts[2].y,
                 "#808080"
             );
         }
