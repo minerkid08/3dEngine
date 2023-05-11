@@ -21,7 +21,7 @@ class Mesh{
     }
 }
 
-class mat4x4{
+class Mat4x4{
     constructor(){
         this.m = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
     }
@@ -31,7 +31,7 @@ class Engine{
     constructor(){
         try{
         this.meshCube = new Mesh();
-        this.matProj = new mat4x4();
+        this.matProj = new Mat4x4();
         this.canvas = document.getElementById("canvas");
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = 640;
@@ -69,7 +69,7 @@ class Engine{
     onUserUpdate(dTime){
         try{
         for(let i = 0; i < this.meshCube.tris.length; i++){
-            alert(this.meshCube.tris);
+            alert(this.meshCube.tris[i].pts);
             let tri = this.meshCube.tris[i];
             let triProjected = new Triangle();
             triProjected.pts[0] = this.multiplyMatrix(tri.pts[0], this.matProj);
