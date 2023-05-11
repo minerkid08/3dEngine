@@ -75,7 +75,7 @@ class Engine{
             triProjected.pts[0] = this.multiplyMatrix(tri[0], this.matProj);
             triProjected.pts[1] = this.multiplyMatrix(tri[1], this.matProj);
             triProjected.pts[2] = this.multiplyMatrix(tri[2], this.matProj);
-            //alert(triProjected.pts[1].x + " " + triProjected.pts[1].y);
+            alert(triProjected.pts[1].x + " " + triProjected.pts[1].y);
             triProjected.pts[0].x += 1;
             triProjected.pts[0].y += 1;
             triProjected.pts[1].x += 1;
