@@ -103,6 +103,7 @@ class Engine{
         return true;
     }
     multiplyMatrix(i, m){
+        try{
         let o = new vec3();
         o.x = i.x * m.m[0][0] + i.y * m.m[1][0] + i.z * m.m[2][0] + m.m[3][0];
         o.y = i.x * m.m[0][1] + i.y * m.m[1][1] + i.z * m.m[2][1] + m.m[3][1];
@@ -114,6 +115,7 @@ class Engine{
             o.y /= w;
             o.z /= w;
         }
+    }catch(e){alert(e)}
         return o;
     }
     drawTri(x1,y1,x2,y2,x3,y3,col){
