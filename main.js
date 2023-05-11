@@ -31,7 +31,7 @@ class Engine{
     constructor(){
         try{
         this.meshCube = new Mesh();
-        this.matProj = null;
+        this.matProj = new mat4x4();
         this.canvas = document.getElementById("canvas");
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = 640;
