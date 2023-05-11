@@ -1,3 +1,4 @@
+alert("e");
 class vec3{
     constructor(x,y,z){
         this.x = x;
