@@ -72,10 +72,11 @@ class Engine{
         for(let i = 0; i < this.meshCube.tris.length; i++){
             let tri = this.meshCube.tris[i];
             let triProjected = new Triangle();
-            let triTranslated = new Triangle();
-            triTranslated.pts[0].z = tri.p[0].z + 3;
-            triTranslated.pts[1].z = tri.p[1].z + 3;
-            triTranslated.pts[2].z = tri.p[2].z + 3;
+            let triTranslated = tri;
+
+            triTranslated.pts[0].z = tri.pts[0].z + 3;
+            triTranslated.pts[1].z = tri.pts[1].z + 3;
+            triTranslated.pts[2].z = tri.pts[2].z + 3;
 
             triProjected.pts[0] = this.multiplyMatrix(triTranslated[0], this.matProj);
             triProjected.pts[1] = this.multiplyMatrix(triTranslated[1], this.matProj);
