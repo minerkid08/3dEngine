@@ -28,12 +28,14 @@ class mat4x4{
 
 class Engine{
     constructor(){
+        try{
         this.meshCube = null;
         this.matProj = null;
         this.canvas = document.getElementById("canvas");
         this.ctx = this.canvas.getContest("2d");
         this.canvas.width = 640;
         this.canvas.height = 480;
+        }catch(e){alert(e)}
     }
     onUserCreate(){
         try{
@@ -67,6 +69,7 @@ class Engine{
         return true;
     }
     onUserUpdate(dTime){
+        try{
         for(let i = 0; i < this.meshCube.tris.length; i++){
             let tri = this.meshCube.tri[i];
             let triProjected = new Triangle();
@@ -83,7 +86,7 @@ class Engine{
                 "#808080"
             );
         }
-
+        }catch(e){alert(e)}
         return true;
     }
     multiplyMatrix(i, m){
