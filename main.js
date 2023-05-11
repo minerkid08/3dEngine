@@ -114,4 +114,5 @@ class Engine{
 function main(){
     let e = new Engine();
     e.onUserCreate();
+    e.onUserUpdate(4);
 }
