@@ -116,12 +116,12 @@ class Engine{
         this.ctx.lineTo(x2, y2);
         this.ctx.stroke();
     }
+    function main(){
+        alert("f");
+        let e = new Engine();
+        e.onUserCreate();
+        e.onUserUpdate(4);
+    }
 }
 }catch(e){alert(e)}
-function main(){
-    let e = new Engine();
-    e.onUserCreate();
-    e.onUserUpdate(4);
-}
-alert("f");
 main();
