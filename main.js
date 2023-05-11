@@ -1,4 +1,5 @@
 alert("e");
+try{
 class vec3{
     constructor(x,y,z){
         this.x = x;
@@ -116,7 +117,7 @@ class Engine{
         this.ctx.stroke();
     }
 }
-
+}catch(e){alert(e)}
 function main(){
     let e = new Engine();
     e.onUserCreate();
