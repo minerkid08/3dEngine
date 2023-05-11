@@ -8,7 +8,7 @@ class vec3{
     }
 }
 
-class triangle{
+class Triangle{
     constructor(){
         this.pts = [];
     }
