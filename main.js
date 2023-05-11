@@ -14,7 +14,7 @@ class triangle{
     }
 }
 
-class mesh{
+class Mesh{
     constructor(){
         this.tris = [];
         this.pts = [];
@@ -30,10 +30,10 @@ class mat4x4{
 class Engine{
     constructor(){
         try{
-        this.meshCube = null;
+        this.meshCube = new Mesh();
         this.matProj = null;
         this.canvas = document.getElementById("canvas");
-        this.ctx = this.canvas.getContest("2d");
+        this.ctx = this.canvas.context("2d");
         this.canvas.width = 640;
         this.canvas.height = 480;
         }catch(e){alert(e)}
@@ -116,7 +116,6 @@ class Engine{
         this.ctx.lineTo(x2, y2);
         this.ctx.stroke();
     }
-    
 }
 function main(){
     alert("f");
