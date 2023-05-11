@@ -122,4 +122,5 @@ function main(){
     e.onUserCreate();
     e.onUserUpdate(4);
 }
+alert("f");
 main();
