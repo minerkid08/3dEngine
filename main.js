@@ -59,7 +59,6 @@ class Engine{
         let fFov = 90; 
         let fAspectRatio = this.canvas.height/this.canvas.width;
         let fFovRad = 1 / Math.tan(fFov * 0.5 / 180 * Math.PI);
-        this.matProj = new mat4x4();
         this.matProj.m[0][0] = fAspectRatio * fFovRad;
         this.matProj.m[1][1] = fFovRad;
         this.matProj.m[2][2] = fFar / (fFar - fNear);
@@ -72,7 +71,7 @@ class Engine{
     onUserUpdate(dTime){
         try{
         for(let i = 0; i < this.meshCube.tris.length; i++){
-            let tri = this.meshCube.tri[i];
+            let tri = this.meshCube.tris[i];
             let triProjected = new Triangle();
             triProjected.pts[0] = this.multiplyMatrix(tri.pts[0], this.matProj);
             triProjected.pts[1] = this.multiplyMatrix(tri.pts[1], this.matProj);
