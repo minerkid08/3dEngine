@@ -69,7 +69,6 @@ class Engine{
     onUserUpdate(dTime){
         try{
         for(let i = 0; i < this.meshCube.tris.length; i++){
-            alert(this.meshCube.tris[i].pts);
             let tri = this.meshCube.tris[i];
             let triProjected = new Triangle();
             triProjected.pts[0] = this.multiplyMatrix(tri[0], this.matProj);
