@@ -88,7 +88,7 @@ class Engine{
             triProjected.pts[1].y *= 0.5 * this.canvas.height;
             triProjected.pts[2].x *= 0.5 * this.canvas.width;
             triProjected.pts[2].y *= 0.5 * this.canvas.height;
-
+            alert(triProjected.pts[1]);
             this.drawTri(
                 triProjected.pts[0].x,
                 triProjected.pts[0].y,
