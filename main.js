@@ -39,7 +39,6 @@ class Engine{
         }catch(e){alert(e)}
     }
     onUserCreate(){
-        try{
         this.meshCube.tris = [
             [new vec3(0,0,0),  new vec3(0,1,0),  new vec3(1,1,0)],
             [new vec3(0,0,0),  new vec3(1,1,0),  new vec3(1,0,0)],
@@ -66,7 +65,6 @@ class Engine{
         this.matProj.m[3][2] = (-fFar * fNear) / (fFar - fNear);
         this.matProj.m[2][3] = 1.0;
         this.matProj.m[3][3] = 0;
-    }catch(e){alert(e);}
         return true;
     }
     onUserUpdate(dTime){
