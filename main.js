@@ -76,6 +76,12 @@ class Engine{
             tri[0].z = tri[0].z + 3;
             tri[1].z = tri[1].z + 3;
             tri[2].z = tri[2].z + 3;
+            tri[0].x = tri[0].x - 0.5;
+            tri[1].x = tri[1].x - 0.5;
+            tri[2].x = tri[2].x - 0.5;
+            tri[0].y = tri[0].y - 0.5;
+            tri[1].y = tri[1].y - 0.5;
+            tri[2].y = tri[2].y - 0.5;
             
             triProjected.pts[0] = this.multiplyMatrix(tri[0], this.matProj);
             triProjected.pts[1] = this.multiplyMatrix(tri[1], this.matProj);
