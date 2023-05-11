@@ -59,6 +59,7 @@ class Engine{
         let fFov = 90; 
         let fAspectRatio = this.canvas.height/this.canvas.width;
         let fFovRad = 1 / Math.tan(fFov * 0.5 / 180 * Math.PI);
+        alert(this.matProj.m);
         this.matProj.m[0][0] = fAspectRatio * fFovRad;
         this.matProj.m[1][1] = fFovRad;
         this.matProj.m[2][2] = fFar / (fFar - fNear);
